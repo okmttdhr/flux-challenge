@@ -22970,6 +22970,9 @@ var firstNonNullValue = _require.firstNonNullValue;
 var lastNonNullValue = _require.lastNonNullValue;
 
 module.exports = function App(props) {
+
+  // distinctUntilChangedは以下がわかりやすい
+  // http://rxmarbles.com/#distinctUntilChanged
   var planet$ = props.planet.distinctUntilChanged();
   var list$ = props.list.distinctUntilChanged();
   var dangerZone$ = props.dangerZone.distinctUntilChanged();

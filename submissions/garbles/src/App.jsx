@@ -6,6 +6,9 @@ const ListControls = require(`./ListControls`)
 const {firstNonNullValue, lastNonNullValue} = require(`./util`)
 
 module.exports = function App (props) {
+
+  // distinctUntilChangedは以下がわかりやすい
+    // http://rxmarbles.com/#distinctUntilChanged
   const planet$ = props.planet.distinctUntilChanged()
   const list$ = props.list.distinctUntilChanged()
   const dangerZone$ = props.dangerZone.distinctUntilChanged()
